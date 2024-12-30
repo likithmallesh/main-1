@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Gas Agency System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/placeholder.svg?height=50&width=50" alt="Bharat Gas Logo" class="logo">
+            <h1>Bharat Gas Agency System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="homeLink">Home</a></li>
+                <li><a href="#" id="bookingLink">Book Cylinder</a></li>
+                <li><a href="#" id="historyLink">Booking History</a></li>
+                <li><a href="#" id="loginLink">Login</a></li>
+                <li><a href="#" id="registerLink">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Bharat Gas Agency System. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="firebase-config.js"></script>
+    <script type="module">
+        import initApp from './app.js';
+        import auth from './auth.js';
+        import booking from './booking.js';
+        import admin from './admin.js';
+
+        initApp();
+        window.auth = auth;
+        window.booking = booking;
+        window.admin = admin;
+    </script>
+</body>
+</html>
+
